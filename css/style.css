@@ -270,6 +270,11 @@ a:hover {
 	color: #000;
 }
 
+.profile .title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
 .personal-info {
 	border-top: 1px solid #ececec;
 	padding-top: 15px;
@@ -1071,6 +1076,38 @@ footer p {
 	font-weight: 300;
 }
 
+
+
+#certifications {
+	padding: 0px;
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+#certifications .item {
+	display: none;
+	opacity: 0;
+	padding: 0px 10px;
+	width: 33.3333%;
+	vertical-align: top;
+	margin-bottom: 12px;
+	color: #fff;
+	font-size: 30px;
+	text-align: center;
+	-moz-box-sizing: border-box;
+}
+
+#certifications .item a {
+	display: inline-block;
+	max-width: 100%;
+	text-decoration: none;
+	background: #fff;
+}
+
+#certifications .item img {
+	max-width: 100%;
+}
 /*-------------------------------------------- 
                 LOADING STYLES
 ---------------------------------------------- */
@@ -1118,97 +1155,105 @@ footer p {
 /* Note: Design for a width of 320px */
 @media only screen and (max-width: 767px) {
 
-.container {
-	max-width: 280px;
-	width: 280px;
-	margin: 0 auto;
+	.container {
+		max-width: 280px;
+		width: 280px;
+		margin: 0 auto;
+	}
+
+	.l-content {
+		background: #000;
+		height: auto;
+		width: 100%;
+		padding: 0px;
+		display: table;
+	}
+
+	.r-content {
+		padding: 0px;
+		width: 100%;
+	}
+
+	.navigation li {
+		float: left;
+		width: 20%;
+	}
+
+	.navigation li a {
+		font-size: 0px;
+	}
+
+	.navigation li a i {
+		font-size: 20px;
+		margin-left: 0px;
+		color: #d1d1d1;
+	}
+
+	.profile-pic {
+		background-size: 100% auto;
+	}
+
+	.personal-info li em {
+		font-size: 13px;
+	}
+
+	.personal-info li span {
+		font-size: 13px;
+	}
+
+	#portfolio .item {
+		width: 100%;
+	}
+
+
+	#certifications .item {
+		width: 100%;
+	}
+
+	.np-main {
+		width: 100%;
+	}
+
+	.services-info ul li {
+		width: 100%;
+	}
+
+	article h3 {
+		margin: 15px 0 0;
+	}
+
+	footer p {
+		font-size: 12px;
+		text-align: center;
+	}
+
+	.social {
+		padding: 0px;
+		display: table;
+		float: none;
+		margin: 0 auto;
+	}
+
+	.flexslider {
+		min-height: auto;
+	}
+
+	footer {
+		height: 100px;
+	}
+
+	.sub-comment {
+		width: 95% !important;
+	}
+
+	.sub-sub-comment {
+		width: 90% !important;
+	}
+
 }
 
-.l-content {
-	background: #000;
-	height: auto;
-	width: 100%;
-	padding: 0px;
-	display: table;
-}
 
-.r-content {
-	padding: 0px;
-	width: 100%;
-}
 
-.navigation li {
-	float: left;
-	width: 20%;
-}
-
-.navigation li a {
-	font-size: 0px;
-}
-
-.navigation li a i {
-	font-size: 20px;
-	margin-left: 0px;
-	color: #d1d1d1;
-}
-
-.profile-pic {
-	background-size: 100% auto;
-}
-
-.personal-info li em {
-	font-size: 13px;
-}
-
-.personal-info li span {
-	font-size: 13px;
-}
-
-#portfolio .item {
-	width: 100%;
-}
-
-.np-main {
-	width: 100%;
-}
-
-.services-info ul li {
-	width: 100%;
-}
-
-article h3 {
-	margin: 15px 0 0;
-}
-
-footer p {
-	font-size: 12px;
-	text-align: center;
-}
-
-.social {
-	padding: 0px;
-	display: table;
-	float: none;
-	margin: 0 auto;
-}
-
-.flexslider {
-	min-height: auto;
-}
-
-footer {
-	height: 100px;
-}
-
-.sub-comment {
-	width: 95% !important;
-}
-
-.sub-sub-comment {
-	width: 90% !important;
-}
-
-}
 
 /* #Mobile (Landscape)
 ================================================== */
@@ -1216,25 +1261,28 @@ footer {
 /* Note: Design for a width of 480px */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 
-.container {
-	max-width: 470px;
-	width: 470px;
-	margin: 0 auto;
-}
+	.container {
+		max-width: 470px;
+		width: 470px;
+		margin: 0 auto;
+	}
 
-.navigation li a i {
-	text-align: center;
-	display: table;
-	margin: 0 auto;
-}
+	.navigation li a i {
+		text-align: center;
+		display: table;
+		margin: 0 auto;
+	}
 
-.services-info ul li {
-	width: 50%;
-}
+	.services-info ul li {
+		width: 50%;
+	}
 
-#portfolio .item {
-	width: 49%;
-}
+	#portfolio .item {
+		width: 49%;
+	}
 
+	#certifications .item {
+		width: 49%;
+	}
 }
 

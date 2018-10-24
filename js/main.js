@@ -32,6 +32,14 @@ jQuery(document).ready(function($) {
 	});
 });
 
+jQuery(document).ready(function($) {
+  "use strict";
+	$('#certifications').mixitup({
+		targetSelector: '.item',
+		transitionSpeed: 450
+	});
+});
+
 /* Nivo - Lightbox */
 jQuery(document).ready(function($) {
   "use strict";

@@ -9,6 +9,17 @@ $(window).scroll(function() {
 });
 
 $(window).scroll(function() {
+	$('.profile span.title').each(function(){
+	var imagePos = $(this).offset().top;
+	var topOfWindow = $(window).scrollTop();
+		if (imagePos < topOfWindow+500) {
+			$(this).addClass("animated flipInX");
+		}
+	});
+});
+
+
+$(window).scroll(function() {
 	$('.profile p').each(function(){
 	var imagePos = $(this).offset().top;
 	var topOfWindow = $(window).scrollTop();
@@ -30,6 +41,17 @@ $(window).scroll(function() {
 
 $(window).scroll(function() {
 	$('#portfolio .item').each(function(){
+	var imagePos = $(this).offset().top;
+	var topOfWindow = $(window).scrollTop();
+		if (imagePos < topOfWindow+500) {
+			$(this).addClass("animated flipInX");
+		}
+	});
+});	
+
+
+$(window).scroll(function() {
+	$('#certifications .item').each(function(){
 	var imagePos = $(this).offset().top;
 	var topOfWindow = $(window).scrollTop();
 		if (imagePos < topOfWindow+500) {

@@ -1,8 +1,8 @@
 <?php
 
 // Define some constants
-define( "RECIPIENT_NAME", "YOUR_NAME_HERE" );
-define( "RECIPIENT_EMAIL", "YOUR_EMAIL_HERE" );
+define( "RECIPIENT_NAME", "Nguyen Vu Linh" );
+define( "RECIPIENT_EMAIL", "linh_nv@outlook.com" );
 define( "EMAIL_SUBJECT", "$subject" );
 
 // Read the form values
@@ -17,6 +17,20 @@ if ( $senderName && $senderEmail && $message ) {
   $recipient = RECIPIENT_NAME . " <" . RECIPIENT_EMAIL . ">";
   $headers = "From: " . $senderName . " <" . $senderEmail . ">";
   $success = mail( $recipient, $subject , $message, $headers );
+
+  header('Content-Type: text/csv');
+  header('Content-Disposition: attachment; filename="contact.csv"');
+  $data = array(
+    $senderName, $senderEmail , $subject, $message,
+    ''
+  );
+
+  $fp = fopen('php://output', 'wb');
+  foreach ( $data as $line ) {
+      $val = explode(",", $line);
+      fputcsv($fp, $val);
+  }
+  fclose($fp);
 }
 
 // Return an appropriate response to the browser
